@@ -1,5 +1,5 @@
 import React from 'React';
-import Stock from './Stock';
+import Stock from './stock';
 import './App.css';
 
 function App() {
