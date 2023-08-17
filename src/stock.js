@@ -18,7 +18,7 @@ class Stock extends React.Component {
         const pointerToThis = this;
         console.log(pointerToThis);
         const API_KEY = 'T9YF0ECIYKXDFK4V';
-        let StockSymbol = 'AMZN';
+        let StockSymbol = 'IBM';
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
@@ -55,15 +55,15 @@ class Stock extends React.Component {
                 {<Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [2, 6, 3],
+            x: this.state.stockChartXValues,
+            y: this.state.stockChartXValues,
             type: 'scatter',
-            mode: 'lines+markers',
-            marker: {color: 'red'},
+            mode: 'text+lines+markers',
+            marker: {color: 'blue'},
           },
-          {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
+          
         ]}
-        layout={ {width: 320, height: 240, title: 'A Fancy Plot'} }
+        layout={ {width: 520, height: 440, title: 'Your Predicted Stock'} }
       />}
             </div>
         )
