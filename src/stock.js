@@ -52,8 +52,8 @@ class Stock extends React.Component {
         return (
             <div>
                 <h1>Stock Market</h1>
-                /*<p>x-values: {this.state.stockChartXValues}</p>
-                <p>y-values: {this.state.stockChartYValues}</p>*/
+                {/*<p>x-values: {this.state.stockChartXValues}</p>
+                <p>y-values: {this.state.stockChartYValues}</p>*/}
             </div>
         )
     }
