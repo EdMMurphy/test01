@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Plot from 'react-plotly.js';
 class Stock extends React.Component {
 
     constructor(props) {
@@ -52,8 +52,19 @@ class Stock extends React.Component {
         return (
             <div>
                 <h1>Stock Market</h1>
-                {/*<p>x-values: {this.state.stockChartXValues}</p>
-                <p>y-values: {this.state.stockChartYValues}</p>*/}
+                {<Plot
+        data={[
+          {
+            x: [1, 2, 3],
+            y: [2, 6, 3],
+            type: 'scatter',
+            mode: 'lines+markers',
+            marker: {color: 'red'},
+          },
+          {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
+        ]}
+        layout={ {width: 320, height: 240, title: 'A Fancy Plot'} }
+      />}
             </div>
         )
     }
